@@ -11,13 +11,13 @@ public class RetrofitInstance {
 
     public static Retrofit getRetrofit()
     {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                .build();
         if(retrofit == null)
         {
-            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-            OkHttpClient client = new OkHttpClient.Builder()
-                                        .addInterceptor(interceptor)
-                                        .build();
             retrofit = new Retrofit.Builder()
                                     .baseUrl(GITHUB_API)
                                     .addConverterFactory(GsonConverterFactory.create())
