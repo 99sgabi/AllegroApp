@@ -13,28 +13,41 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="2dp"
-        card_view:cardMaxElevation="3dp"
+        card_view:cardElevation="@dimen/card_layout_elevation"
+        card_view:cardMaxElevation="@dimen/card_layout_max_elevation"
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/card_layout_padding">
+
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_label"
+                style="@style/Label"/>
 
             <TextView
                 android:id="@+id/repository_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
+                style="@style/NormalText"/>
+
+            <TextView
+                android:id="@+id/description_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_label"
+                style="@style/Label"/>
 
             <TextView
                 android:id="@+id/repository_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
+                style="@style/NormalText"/>
 
         </LinearLayout>
 

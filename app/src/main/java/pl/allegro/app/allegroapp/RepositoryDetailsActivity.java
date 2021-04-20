@@ -24,6 +24,8 @@ public class RepositoryDetailsActivity extends AppCompatActivity {
     private TextView idTextView;
     private TextView privateTextView;
     private TextView fullNameTextView;
+    private TextView stargazersCountTextView;
+    private TextView ownerTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class RepositoryDetailsActivity extends AppCompatActivity {
         privateTextView = findViewById(R.id.private_repository);
         fullNameTextView = findViewById(R.id.repository_full_name);
         idTextView = findViewById(R.id.repository_id);
+        stargazersCountTextView = findViewById(R.id.repository_stargazers_count);
+        ownerTextView = findViewById(R.id.repository_owner);
     }
 
     private void connectToRetrofit(String name)
@@ -71,8 +75,14 @@ public class RepositoryDetailsActivity extends AppCompatActivity {
         descriptionTextView.setText(repository.getDescription());
         sizeTextView.setText(Integer.toString(repository.getSize()));
         defaultBranchTextView.setText(repository.getDefaultBranch());
-        privateTextView.setText(repository.isPrivate()? "yes" : "no");
+        String privacy = String.format(
+                getString(R.string.is_private_repository),
+                repository.isPrivate()? getString(R.string.yes_label) : getString(R.string.no_label)
+        );
+        privateTextView.setText(privacy);
         fullNameTextView.setText(repository.getFullName());
         idTextView.setText(Long.toString(repository.getId()));
+        stargazersCountTextView.setText(Integer.toString(repository.getStargazers()));
+        ownerTextView.setText(repository.getOwner().toString());
     }
 }

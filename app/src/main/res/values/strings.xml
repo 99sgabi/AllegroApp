@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">AllegroApp</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_label">Name:</string>
+    <string name="description_label">Description:</string>
+    <string name="is_private_repository">Is it private repository? : %s</string>
+    <string name="yes_label">YES</string>
+    <string name="no_label">NO</string>
+    <string name="repository_id_label">ID:</string>
+    <string name="repository_full_name_label">Full name:</string>
+    <string name="repository_default_branch_label">Default branch:</string>
+    <string name="repository_size_label">Size:</string>
+    <string name="repository_stargazers_count_label">Number of stargazers:</string>
+    <string name="repository_owner_label">Owner:</string>
 </resources>

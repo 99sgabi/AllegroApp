@@ -17,7 +17,26 @@ public class Repository {
     String defaultBranch;
     @SerializedName("size")
     int size;
-    //dodać owner;
+    @SerializedName("stargazers_count")
+    int stargazers;
+    @SerializedName("owner")
+    Owner owner;
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public int getStargazers() {
+        return stargazers;
+    }
+
+    public void setStargazers(int stargazers) {
+        this.stargazers = stargazers;
+    }
 
     public String getName() {
         return name;
