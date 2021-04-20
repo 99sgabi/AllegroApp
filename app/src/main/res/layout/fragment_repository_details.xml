@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/backgroundColorCard"
-    tools:context=".RepositoryDetailsActivity">
+    android:background="@color/backgroundColorCard">
+    <!-- tools:context=".RepositoryDetailsActivity"-->
 
     <LinearLayout
         android:layout_width="match_parent"
