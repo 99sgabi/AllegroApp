@@ -13,3 +13,6 @@ powinna dziłać jak działa, natomiast w przypadku tabletów można by było za
 lewej cała lista repozytorów allegro. Ponadto można by było stworzyć aplikację, która pozwalałaby po nazwie organizacji wyświetlać ich repozytoria.
 
 Ponadto można by było poprawić wygląd i upewnić się iż jest on poprawny (tzn. user friendly i przejrzysty, może po konsultacji z specjalistą od UX)
+
+**
+Jako rozwiązanie przesyłam plik apk**
