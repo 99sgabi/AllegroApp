@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AllegroApp</string>
+    <string name="name_label">Nazwa:</string>
+    <string name="description_label">Opis:</string>
+    <string name="is_private_repository">Repozytorium prywatne? : %s</string>
+    <string name="yes_label">TAK</string>
+    <string name="no_label">NIE</string>
+    <string name="repository_id_label">ID:</string>
+    <string name="repository_full_name_label">Pełna nazwa:</string>
+    <string name="repository_default_branch_label">Domyślna gałąź</string>
+    <string name="repository_size_label">Rozmiar:</string>
+    <string name="repository_stargazers_count_label">Ilość obserwujących:</string>
+    <string name="repository_owner_label">ID i nazwa właściciela:</string>
+</resources>

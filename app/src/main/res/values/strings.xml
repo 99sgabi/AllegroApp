@@ -10,5 +10,5 @@
     <string name="repository_default_branch_label">Default branch:</string>
     <string name="repository_size_label">Size:</string>
     <string name="repository_stargazers_count_label">Number of stargazers:</string>
-    <string name="repository_owner_label">Owner:</string>
+    <string name="repository_owner_label">Owners ID and username:</string>
 </resources>
