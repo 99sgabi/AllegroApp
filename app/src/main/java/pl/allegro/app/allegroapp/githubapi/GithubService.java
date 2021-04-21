@@ -10,6 +10,9 @@ public interface GithubService {
     @GET("orgs/allegro/repos")
     public Call<List<Repository>> getRepositories();
 
+    @GET("orgs/{org}")
+    public Call<Owner> getOrganization(@Path("org") String organizationName);
+
     @GET("/repos/allegro/{repo}")
     public Call<Repository> getRepository(@Path("repo") String repositoryName);
 }

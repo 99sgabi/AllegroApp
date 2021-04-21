@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import pl.allegro.app.allegroapp.githubapi.GithubService;
+import pl.allegro.app.allegroapp.githubapi.Owner;
 import pl.allegro.app.allegroapp.githubapi.Repository;
 import pl.allegro.app.allegroapp.githubapi.RetrofitInstance;
 import retrofit2.Call;
@@ -29,6 +30,8 @@ public class RepositoryDetailsFragment extends Fragment {
     private TextView fullNameTextView;
     private TextView stargazersCountTextView;
     private TextView ownerTextView;
+    private String ownerName;
+    public static final String OWNER_NAME_EXTRA = "owner name passed to activity";
 
     public RepositoryDetailsFragment() { }
 
@@ -60,6 +63,15 @@ public class RepositoryDetailsFragment extends Fragment {
         idTextView = v.findViewById(R.id.repository_id);
         stargazersCountTextView = v.findViewById(R.id.repository_stargazers_count);
         ownerTextView = v.findViewById(R.id.repository_owner);
+
+        ownerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),OwnerInfoActivity.class);
+                intent.putExtra(OWNER_NAME_EXTRA, ownerName);
+                startActivity(intent);
+            }
+        });
     }
 
     private void connectToRetrofit(String name)
@@ -94,6 +106,7 @@ public class RepositoryDetailsFragment extends Fragment {
         fullNameTextView.setText(repository.getFullName());
         idTextView.setText(Long.toString(repository.getId()));
         stargazersCountTextView.setText(Integer.toString(repository.getStargazers()));
+        ownerName = repository.getOwner().getLogin();
         ownerTextView.setText(repository.getOwner().toString());
     }
 }

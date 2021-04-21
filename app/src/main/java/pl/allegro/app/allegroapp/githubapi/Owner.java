@@ -9,6 +9,16 @@ public class Owner {
     long id;
     @SerializedName("type")
     String type;
+    @SerializedName("avatar_url")
+    String avatarUrl;
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
 
     public String getLogin() {
         return login;
